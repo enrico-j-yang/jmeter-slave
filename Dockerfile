@@ -8,7 +8,7 @@ EXPOSE 1099 50000
 # Entrypoint has same signature as "jmeter" command
 COPY entrypoint.sh /
 
-WORKDIR	${JMETER_HOME}
+WORKDIR	/app
 
 # Application to run on starting the container
 ENTRYPOINT ["/entrypoint.sh", "-Dserver.rmi.localport=50000", "-Dserver_port=1099"]
